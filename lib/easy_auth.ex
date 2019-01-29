@@ -1,4 +1,4 @@
-defmodule SimpleAuth do
+defmodule EasyAuth do
   alias Plug.Crypto
   alias Plug.Conn
 
