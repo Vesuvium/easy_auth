@@ -1,21 +1,34 @@
-# SimpleAuth
+# Easy auth
 
-**TODO: Add description**
+A Plug that provides basic http authentication and it's easy to configure.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `simple_auth` to your list of dependencies in `mix.exs`:
-
 ```elixir
-def deps do
-  [
-    {:simple_auth, "~> 0.1.0"}
-  ]
-end
+{:easy_auth, "~> 1.0.0"}
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/simple_auth](https://hexdocs.pm/simple_auth).
+## Usage
 
+Simply plug it in your router or pipeline:
+
+```elixir
+plug EasyAuth, [username: "admin", password: "admin", realm: "Authentication"]
+```
+
+If you use Confex, you can add the options to your configuration:
+
+```elixir
+config :yourapp,
+  easy_auth: [
+    username: {:system, "CAKES_USERNAME", "admin"},
+    password: {:system, "CAKES_PASSWORD", "admin"},
+    realm: "Authentication"
+  ]
+```
+
+And your router, you would write:
+
+```elixir
+plug EasyAuth, Confex.get_env(:yourapp, :easy_auth)
+```
