@@ -23,6 +23,7 @@ defmodule EasyAuth.MixProject do
     [
       {:confex, "~> 3.4.0"},
       {:credo, "~> 0.9.1", only: [:dev, :test], runtime: false},
+      {:ex_doc, ">= 0.0.0", only: :dev},
       {:plug, "~> 1.7.1"}
     ]
   end
