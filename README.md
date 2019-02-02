@@ -21,8 +21,8 @@ If you use Confex, you can add the options to your configuration:
 ```elixir
 config :yourapp,
   easy_auth: [
-    username: {:system, "CAKES_USERNAME", "admin"},
-    password: {:system, "CAKES_PASSWORD", "admin"},
+    username: {:system, "APP_USERNAME", "admin"},
+    password: {:system, "APP_PASSWORD", "admin"},
     realm: "Authentication"
   ]
 ```
