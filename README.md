@@ -16,7 +16,24 @@ Simply plug it in your router or pipeline:
 plug EasyAuth, [username: "admin", password: "admin", realm: "Authentication"]
 ```
 
-If you use Confex, you can add the options to your configuration:
+You can also set the options in your configuration:
+
+```elixir
+config :yourapp,
+  easy_auth: [
+    username: "admin",
+    password: "pizza",
+    realm: "Authentication"
+  ]
+```
+
+And your router, you would write:
+
+```elixir
+plug EasyAuth, Application.get_env(:yourapp, :easy_auth)
+```
+
+If you use confex, you can do:
 
 ```elixir
 config :yourapp,
@@ -27,8 +44,11 @@ config :yourapp,
   ]
 ```
 
-And your router, you would write:
+and:
 
 ```elixir
 plug EasyAuth, Confex.get_env(:yourapp, :easy_auth)
 ```
+
+However, since Plugs are compiled Confex will use the values available at
+compile-time.
