@@ -27,8 +27,8 @@ defmodule EasyAuth.MixProject do
 
   defp deps do
     [
-      {:credo, "~> 0.9", only: [:dev, :test], runtime: false},
-      {:ex_doc, ">= 0.0.0", only: :dev},
+      {:credo, "~> 0.9", only: :dev, runtime: false},
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
       {:plug, "~> 1.7"}
     ]
   end
