@@ -1,4 +1,7 @@
 defmodule EasyAuth do
+  @moduledoc """
+  A Plug that implements HTTP Basic authentication.
+  """
   alias Plug.Crypto
   alias Plug.Conn
 
