@@ -9,7 +9,13 @@ defmodule EasyAuth.MixProject do
       start_permanent: Mix.env() == :prod,
       description: description(),
       package: package(),
-      deps: deps()
+      deps: deps(),
+      name: "EasyAuth",
+      source_url: "https://github.com/vesuvium/easy_auth",
+      docs: [
+          main: "readme",
+          extras: ["README.md"]
+      ]
     ]
   end
 
