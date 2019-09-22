@@ -5,7 +5,7 @@ A Plug that provides basic http authentication and it's easy to configure.
 ## Installation
 
 ```elixir
-{:easy_auth, "~> 1.0.0"}
+{:easy_auth, "~> 1.1"}
 ```
 
 ## Usage

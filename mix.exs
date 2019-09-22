@@ -4,7 +4,7 @@ defmodule EasyAuth.MixProject do
   def project do
     [
       app: :easy_auth,
-      version: "1.0.0",
+      version: "1.1.0",
       elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,
       description: description(),
@@ -13,8 +13,8 @@ defmodule EasyAuth.MixProject do
       name: "EasyAuth",
       source_url: "https://github.com/vesuvium/easy_auth",
       docs: [
-          main: "readme",
-          extras: ["README.md"]
+        main: "readme",
+        extras: ["README.md"]
       ]
     ]
   end
