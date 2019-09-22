@@ -1,5 +1,8 @@
 # Easy auth
 
+[![Hex.pm](https://img.shields.io/hexpm/v/easy_auth.svg?style=for-the-badge)](https://hex.pm/packages/easy_auth)
+[![Hexdocs](https://img.shields.io/badge/docs-hexdocs-blueviolet.svg?style=for-the-badge)](https://hexdocs.pm/easy_auth)
+
 A Plug that provides basic http authentication and it's easy to configure.
 
 ## Installation
